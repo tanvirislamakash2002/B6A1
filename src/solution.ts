@@ -1,4 +1,4 @@
-const formatValue =(fv:string|number|boolean)=>{
+const formatValue =(fv:(string|number|boolean))=>{
 if(typeof fv === 'string'){
     return fv.toUpperCase()
 }
@@ -10,9 +10,11 @@ else if(typeof fv === 'boolean'){
 }
 
 }
-console.log(formatValue('true'));
+// console.log(formatValue('true'));
 
 
-const getLength =()=>{
-
+const getLength =(gl:(string|number[]))=>{
+return gl.length
 }
+
+console.log(getLength('akash'));
