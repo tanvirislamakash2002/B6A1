@@ -1,20 +1,67 @@
-const formatValue =(fv:(string|number|boolean))=>{
-if(typeof fv === 'string'){
-    return fv.toUpperCase()
-}
-else if(typeof fv === 'number'){
-    return fv*10
-}
-else if(typeof fv === 'boolean'){
-    return !fv
-}
+// problem 1 -------------------------------------------------------
+
+type FormatValue = string | number | boolean
+
+const formatValue = (fv: FormatValue) => {
+    if (typeof fv === 'string') {
+        return fv.toUpperCase()
+    }
+    else if (typeof fv === 'number') {
+        return fv * 10
+    }
+    else if (typeof fv === 'boolean') {
+        return !fv
+    }
 
 }
-// console.log(formatValue('true'));
+// console.log(formatValue('sss'));
 
 
-const getLength =(gl:(string|number[]))=>{
-return gl.length
+// problem 2-------------------------------------------------------
+const getLength = (gl: (string | number[])) => {
+    return gl.length
 }
 
-console.log(getLength('akash'));
+// console.log(getLength('akash'));
+
+// problem 3-------------------------------------------------------
+
+class Person {
+    name: string;
+    age: number
+
+    constructor(name: string, age: number) {
+        this.name = name
+        this.age = age
+    }
+    getDetails(): string {
+        return `Name: ${this.name} , Age: ${this.age} `
+    }
+}
+
+const person1 = new Person('akash', 30);
+
+// console.log(person1.getDetails());
+
+// problem 4-------------------------------------------------------
+
+type FilterByRating = { title: string, rating: number }[]
+
+const filterByRating = (books: FilterByRating): FilterByRating => {
+    return books.filter(book => book.rating >= 4)
+}
+
+
+const books = [
+    { title: 'Book A', rating: 4.5 },
+    { title: 'Book B', rating: 3.2 },
+    { title: 'Book B', rating: 4.2 },
+    { title: 'Book C', rating: 5.0 },
+];
+
+// console.log(filterByRating(books));
+
+
+
+
+
