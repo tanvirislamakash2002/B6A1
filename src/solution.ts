@@ -104,7 +104,22 @@ const myBook: Book = {
 // printBookDetails(myBook);
 
 
+// problem 7-------------------------------------------------------
 
+const getUniqueValues = (array1: number[], array2: number[]): number[] => {
+    const uniqueValues = array1
+    array2.forEach(value => {
+        if (!uniqueValues.includes(value)) {
+            uniqueValues.push(value)
+        }
+    })
+    return uniqueValues
+}
+
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+// console.log(getUniqueValues(array1, array2));
 
 
 
