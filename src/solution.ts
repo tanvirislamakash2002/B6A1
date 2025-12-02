@@ -78,7 +78,30 @@ const users = [
 // console.log(filterActiveUsers(users));
 
 
+// problem 6-------------------------------------------------------
 
+type Book = {
+    title: string,
+    author: string,
+    publishedYear: number
+    isAvailable: boolean
+}
+
+
+const printBookDetails = (input6: Book) => {
+    const {
+        title, author, publishedYear, isAvailable, } = input6
+    return console.log(`Title: ${title}, Author: ${author}, Published: ${publishedYear}, Available: ${isAvailable ? 'Yes' : 'No'}`);
+}
+
+const myBook: Book = {
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    publishedYear: 1925,
+    isAvailable: true,
+};
+
+// printBookDetails(myBook);
 
 
 
