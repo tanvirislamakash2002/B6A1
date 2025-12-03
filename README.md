@@ -1,1 +1,2 @@
-testing file
+# What is the use of enums in TypeScript? Provide an example of a numeric and string enum.
+

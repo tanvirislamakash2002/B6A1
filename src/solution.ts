@@ -2,15 +2,17 @@
 
 type FormatValue = string | number | boolean
 
-const formatValue = (fv: FormatValue) => {
-    if (typeof fv === 'string') {
-        return fv.toUpperCase()
+const formatValue = (input1: FormatValue):FormatValue => {
+    if (typeof input1 === 'string') {
+        return input1.toUpperCase()
     }
-    else if (typeof fv === 'number') {
-        return fv * 10
+    else if (typeof input1 === 'number') {
+        return input1 * 10
     }
-    else if (typeof fv === 'boolean') {
-        return !fv
+    else if (typeof input1 === 'boolean') {
+        return !input1
+    }else{
+        return "The Type is invalid"
     }
 
 }
@@ -18,11 +20,18 @@ const formatValue = (fv: FormatValue) => {
 
 
 // problem 2-------------------------------------------------------
-const getLength = (gl: (string | number[])) => {
-    return gl.length
+const getLength = (value2: (string | any[])):number => {
+    if(typeof value2 === 'string'){
+        return value2.length
+    }
+    else if(Array.isArray(value2)){
+        return value2.length
+    }else{
+        return 0
+    }
 }
 
-// console.log(getLength('akash'));
+console.log(getLength([1,6,9,12]));
 
 // problem 3-------------------------------------------------------
 
@@ -146,7 +155,7 @@ const products = [
     { name: 'Bag', price: 50, quantity: 1, discount: 20 },
 ];
 
-console.log(calculateTotalPrice(products));
+// console.log(calculateTotalPrice(products));
 
 
 
