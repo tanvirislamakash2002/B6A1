@@ -1,4 +1,3 @@
-
 type FormatValue = string | number | boolean
 
 const formatValue = (input1: FormatValue): FormatValue => {
@@ -12,7 +11,6 @@ const formatValue = (input1: FormatValue): FormatValue => {
         return !input1
     }
     throw new Error('Invalid Input');
-
 }
 
 const getLength = (input2: (string | any[])): number => {
@@ -21,8 +19,6 @@ const getLength = (input2: (string | any[])): number => {
     }
     throw new Error('Invalid Input');
 }
-
-
 
 class Person {
     name: string;
@@ -37,20 +33,11 @@ class Person {
     }
 }
 
-
-
-
-
 type FilterByRating = { title: string, rating: number }
 
 const filterByRating = (input3: FilterByRating[]): FilterByRating[] => {
     return input3.filter(i => i.rating >= 4)
 }
-
-
-
-
-
 
 type User = {
     id: number,
@@ -63,8 +50,6 @@ const filterActiveUsers = (users: User[]): User[] => {
     return users.filter(user => user.isActive === true)
 }
 
-
-
 interface Book {
     title: string;
     author: string;
@@ -72,28 +57,17 @@ interface Book {
     isAvailable: boolean;
 }
 
-
 const printBookDetails = (book: Book): void => {
     const { title, author, publishedYear, isAvailable } = book
 
     console.log(`Title: ${title}, Author: ${author}, Published: ${publishedYear}, Available: ${isAvailable ? 'Yes' : 'No'}`);
 }
 
-const myBook: Book = {
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-    publishedYear: 1925,
-    isAvailable: false,
-};
-
-
 type GetUniqueValues = string | number
 
 const getUniqueValues = (array1: GetUniqueValues[], array2: GetUniqueValues[]): GetUniqueValues[] => {
 
     const uniqueValues: GetUniqueValues[] = []
-
-
 
     const isAvailable = (array: GetUniqueValues[], value: GetUniqueValues): boolean => {
         for (let i = 0; i < array.length; i++) {
@@ -120,16 +94,12 @@ const getUniqueValues = (array1: GetUniqueValues[], array2: GetUniqueValues[]): 
     return uniqueValues
 }
 
-
-
-
 type CalculateTotalPrice = {
     name: string,
     price: number,
     quantity: number
     discount?: number
 }[]
-
 
 const calculateTotalPrice = (products: CalculateTotalPrice): number => {
 
@@ -148,7 +118,3 @@ const calculateTotalPrice = (products: CalculateTotalPrice): number => {
     return totalPrice
 
 }
-
-
-
-
